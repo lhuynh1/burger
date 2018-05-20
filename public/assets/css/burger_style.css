@@ -1,0 +1,19 @@
+body {
+    background-image: url("../img/burger-bg.jpg");
+    background-repeat: repeat;
+}
+
+#main-header {
+    font-family: "Monoton";
+}
+
+#bgr-img {
+    height: 80pt;
+    width: 80pt;
+}
+
+#sm-header {
+    font-family: "Monoton";
+    font-size: 18pt;
+
+}
