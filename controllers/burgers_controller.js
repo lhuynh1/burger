@@ -17,13 +17,14 @@ router.get('/index', function (req, res) {
 // create the burger
 router.post('/burger/create', function (req, res) {
     burger.insertOne(req.body.burger_name, function() {
-        res.redirect('/index');
+        console.log(req.body);
+        res.render('/burger/create');
     });
 });
 
 
 // devour the burger
-router.post('/burger/eat/:id', function(req, res) {
+router.post('/burger/devour/:id', function(req, res) {
     burger.updateOne(req.params.id, function() {
         res.redirect('/index');
     });

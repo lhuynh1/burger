@@ -15,16 +15,18 @@
                 <h2 id="sm-header">Ready to eat!!</h2>
                 {{#each burgers}}
                     {{#unless devoured}}
-                    <form method="POST" action="burger/eat/{{id}}">
+                    <form action="burger/devour/{{id}}" method="POST">
                         <div class="input-group">
                             <li class="form-control">
-                                {{id}}. {{burger_name}}
+                                {{id}}: {{burger_name}}
                             </li>
+
                             <span class="input-group-btn">
                                 <button class="btn btn-warning dvr-btn" type="submit">
                                     Devour it!
                                 </button>
                             </span>
+
                         </div>
                     </form>
                     {{/unless}}
@@ -42,7 +44,7 @@
                         {{#if this.devoured}}
                         <div class="input-group">
                             <li class="form-control">
-                                {{this.id}}.
+                                {{this.id}}:
                                 {{this.burger_name}}
                             </li>
                         </div>
@@ -53,32 +55,5 @@
 
         </div>
     </div> <!-- end of row -->
-
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="panel">
-                <div class="panel-header text-center">
-                    <h2 id="sm-header">Place your burger order here:<h2>
-
-                     <form method="POST" action="burger/create">
-                        <div class="row">
-                            <div class="col-lg-12 form-group text-center">
-                                <input type="text" class="form-control" id="form-box">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <button type="submit" class="btn btn-success">Order up!</button>
-                            </div>
-                        </div>
-
-                </form>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
 
 </div>
