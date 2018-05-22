@@ -3,7 +3,7 @@ var router = express.Router();
 var burger = require('../models/burger.js');
 
 router.get('/', function(req, res) {
-    res.render('index');
+    res.redirect('/index');
 });
 
 // burgers on page
@@ -18,7 +18,7 @@ router.get('/index', function (req, res) {
 router.post('/burger/create', function (req, res) {
     burger.insertOne(req.body.burger_name, function() {
         console.log(req.body);
-        res.render('/burger/create');
+        res.redirect('/index');
     });
 });
 

@@ -4,9 +4,7 @@ var connection = require('./connection.js');
 // selectAll method selecting all data from the db
 var orm = {
     selectAll: function (cb) {
-        var queryString = 'SELECT * FROM burgers';
-
-        connection.query(queryString, function (err, data) {
+        connection.query('SELECT * FROM burgers', function (err, data) {
             if (err) throw err;
             cb(data);
         });
@@ -24,11 +22,11 @@ var orm = {
     },
 
 // updateOne method
-    updateOne: function(burger_id, cb) {
+    updateOne: function(bgr_id, cb) {
         // SQL query string: UPDATE table SET chosen-column = value WHERE condition;
         connection.query('UPDATE burgers SET ? WHERE ?', 
         [{devoured: true },
-         {id: burger_id}], function(err, data) {
+         {id: bgr_id}], function(err, data) {
             if (err) throw err;
             cb(data);
         });
