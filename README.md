@@ -8,4 +8,4 @@ Each burger in the waiting area also has a Devour it! button. When the user clic
 
 [Heroku App] (https://damp-peak-88458.herokuapp.com/)
 
-
+![Alt text](/public/assets/img/burger-app.PNG?raw=true "EAT DA BURGER")
